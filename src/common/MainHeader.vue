@@ -51,7 +51,7 @@ export default defineComponent({
 		const store = useStore()
 		const router = useRouter()
 
-		// let usename = storageSession.getItem('info').username
+		let usename = '张三'
 
 		const { locale } = useI18n()
 
@@ -83,7 +83,7 @@ export default defineComponent({
 				store.dispatch('app/toggleSideBar')
 			},
 			langs,
-			// usename,
+			usename,
 			toggleLang,
 			logout,
 			ch,
@@ -98,14 +98,14 @@ export default defineComponent({
 .navbar {
 	height: 50px;
 	overflow: hidden;
-	position: relative;
 	background: #fff;
 	box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	.hamburger-container {
 		line-height: 46px;
 		height: 100%;
-		float: left;
 		cursor: pointer;
 		transition: all 0.3s;
 		-webkit-tap-highlight-color: transparent;
@@ -116,13 +116,13 @@ export default defineComponent({
 	}
 
 	.breadcrumb-container {
-		float: left;
+		flex: 1;
 	}
 
 	.right-menu {
-		float: right;
 		display: flex;
 		align-items: center;
+		justify-content: flex-end;
 		.inter {
 			width: 40px;
 			height: 48px;
@@ -169,5 +169,15 @@ export default defineComponent({
 .el-dropdown-menu__item:not(.is-disabled):hover {
 	color: #606266;
 	background: #f0f0f0;
+}
+</style>
+<style lang="scss">
+.resetTop {
+	.el-popper__arrow {
+		display: none;
+		&::before {
+			display: none;
+		}
+	}
 }
 </style>

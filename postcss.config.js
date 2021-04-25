@@ -11,7 +11,7 @@ module.exports = {
       unitPrecision: 3, //将px转化为视窗单位值的小数位数
       propList: ["*"], // 指定转换的css属性的单位，*代表全部css属性的单位都进行转换
       viewportUnit: "vw", //指定要转换成的视窗单位值
-      selectorBlackList: ['hamburger-container','hamburger'], //指定不转换视窗单位值得类，可以自定义，可以无限添加
+      selectorBlackList: ['navbar','hamburger-container','breadcrumb-container','hamburger','resetTop','right-panel','scrollbar-wrapper'], //指定不转换视窗单位值得类，可以自定义，可以无限添加
       minPixelValue: 1, //小于等于1px不转换为视窗单位
       mediaQuery: false, // 是否在媒体查询的css代码中也进行转换，默认false
       replace: true, // 是否转换后直接更换属性值
