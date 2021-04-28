@@ -5,7 +5,6 @@ import store from './store'
 import ElementPlus from 'element-plus'
 import 'element-plus/lib/theme-chalk/index.css'
 import 'dayjs/locale/zh-cn'
-import locale from 'element-plus/lib/locale'
 import "/@/assets/iconfont/iconfont.js"
 import "/@/assets/iconfont/iconfont.css";
 // 内置国际化语言包
@@ -23,4 +22,4 @@ const i18n = createI18n({
 // console.log(import.meta.env)
 const app = createApp(App)
 app.use(store)
-.use(router).use(ElementPlus, { locale }).use(i18n).mount('#app')
+.use(router).use(ElementPlus).use(i18n).mount('#app')

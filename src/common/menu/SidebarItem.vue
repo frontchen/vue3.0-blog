@@ -15,7 +15,7 @@
 			</app-link>
 		</template>
 
-		<el-submenu v-else ref="subMenu" :index="resolvePath(item.path)" popper-append-to-body>
+		<el-submenu v-else ref="subMenu" :index="resolvePath(item.path)" popper-class="submenu-popper" popper-append-to-body>
 			<template #title>
 				<i :class="item.meta.icon"></i>
 				<span>{{ $t(item.meta.title) }}</span>
