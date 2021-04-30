@@ -12,7 +12,6 @@
 </template>
 
 <script >
-import { pathToRegexp } from 'path-to-regexp'
 import { ref, defineComponent, watch, Ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
@@ -22,13 +21,12 @@ export default defineComponent({
 		const levelList = ref([])
 		const route = useRoute()
 		const router = useRouter()
-
 		const isDashboard = (route) => {
 			const name = route && route.name ? router.name : ''
 			if (!name) {
 				return false
 			}
-			return name.trim().toLocaleLowerCase() === 'welcome'.toLocaleLowerCase()
+			return name.trim().toLocaleLowerCase() === 'home'.toLocaleLowerCase()
 		}
 
 		const getBreadcrumb = () => {
@@ -37,7 +35,7 @@ export default defineComponent({
 			if (!isDashboard(first)) {
 				matched = [
 					{
-						path: '/welcome',
+						path: '/home',
 						meta: { title: 'home' }
 					}
 				].concat(matched)
@@ -54,19 +52,14 @@ export default defineComponent({
 			() => getBreadcrumb()
 		)
 
-		const pathCompile = (path) => {
-			const { params } = route
-			var toPath = pathToRegexp.compile(path)
-			return toPath(params)
-		}
-
 		const handleLink = (item) => {
 			const { redirect, path } = item
+			console.log(['item', redirect, path])
 			if (redirect) {
 				router.push(redirect.toString())
 				return
 			}
-			router.push(pathCompile(path))
+			router.push(path)
 		}
 
 		return { levelList, handleLink }

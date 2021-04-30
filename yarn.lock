@@ -802,6 +802,14 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+echarts@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.nlark.com/echarts/download/echarts-5.1.1.tgz#b186f162f017c555cfd67b12ede6762bdc3ddfda"
+  integrity sha1-sYbxYvAXxVXP1nsS7eZ2K9w939o=
+  dependencies:
+    tslib "2.0.3"
+    zrender "5.1.0"
+
 electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.712:
   version "1.3.717"
   resolved "https://registry.nlark.com/electron-to-chromium/download/electron-to-chromium-1.3.717.tgz#78d4c857070755fb58ab64bcc173db1d51cbc25f"
@@ -1342,11 +1350,6 @@ path-parse@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npm.taobao.org/path-parse/download/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha1-1i27VnlAXXLEc37FhgDp3c8G0kw=
-
-path-to-regexp@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-6.2.0.tgz#f7b3803336104c346889adece614669230645f38"
-  integrity sha1-97OAMzYQTDRoia3s5hRmkjBkXzg=
 
 path-type@^4.0.0:
   version "4.0.0"
@@ -2126,6 +2129,11 @@ regenerator-runtime@^0.13.7:
   resolved "https://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
   integrity sha1-ysLazIoepnX+qrrriugziYrkb1U=
 
+resize-detector@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npm.taobao.org/resize-detector/download/resize-detector-0.3.0.tgz#fe495112e184695500a8f51e0389f15774cb1cfc"
+  integrity sha1-/klREuGEaVUAqPUeA4nxV3TLHPw=
+
 resize-observer-polyfill@^1.5.1:
   version "1.5.1"
   resolved "https://registry.npm.taobao.org/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
@@ -2320,6 +2328,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+tslib@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.0.3.tgz?cache=0&sync_timestamp=1618847132149&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
+  integrity sha1-jgdBrEX8DCJuWKF7/D5kubxsphw=
+
 tslib@^2.0.3:
   version "2.2.0"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
@@ -2402,6 +2415,19 @@ vite@^2.0.1:
   optionalDependencies:
     fsevents "~2.3.1"
 
+vue-demi@^0.7.4:
+  version "0.7.5"
+  resolved "https://registry.npm.taobao.org/vue-demi/download/vue-demi-0.7.5.tgz?cache=0&sync_timestamp=1618713492720&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-demi%2Fdownload%2Fvue-demi-0.7.5.tgz#88dee7492fc99a0f911ff03fc02c658fa2a79af8"
+  integrity sha1-iN7nSS/Jmg+RH/A/wCxlj6Knmvg=
+
+vue-echarts@^6.0.0-rc.4:
+  version "6.0.0-rc.4"
+  resolved "https://registry.npm.taobao.org/vue-echarts/download/vue-echarts-6.0.0-rc.4.tgz?cache=0&sync_timestamp=1617019246202&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-echarts%2Fdownload%2Fvue-echarts-6.0.0-rc.4.tgz#e7d25304136db7d959f9710172c4d36f62f620e4"
+  integrity sha1-59JTBBNtt9lZ+XEBcsTTb2L2IOQ=
+  dependencies:
+    resize-detector "^0.3.0"
+    vue-demi "^0.7.4"
+
 vue-i18n@9.0.0:
   version "9.0.0"
   resolved "https://registry.npm.taobao.org/vue-i18n/download/vue-i18n-9.0.0.tgz?cache=0&sync_timestamp=1618508691259&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-i18n%2Fdownload%2Fvue-i18n-9.0.0.tgz#a04c41d5ed3d5a068e923517bfaa0abcbc84e174"
@@ -2446,3 +2472,10 @@ yaml@^1.10.0:
   version "1.10.2"
   resolved "https://registry.npm.taobao.org/yaml/download/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha1-IwHF/78StGfejaIzOkWeKeeSDks=
+
+zrender@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npm.taobao.org/zrender/download/zrender-5.1.0.tgz#b6a84c3aa7ccc6642ee0519901ca4c0835c4d85e"
+  integrity sha1-tqhMOqfMxmQu4FGZAcpMCDXE2F4=
+  dependencies:
+    tslib "2.0.3"

@@ -1,12 +1,9 @@
 <template>
-	<div class="wscn-http404-container">
-
-	</div>
+	<div> </div>
 </template>
 
 <script>
 import { onBeforeMount } from 'vue'
-
 export default {
 	name: '404',
 	setup() {
@@ -24,3 +21,4 @@ export default {
 	}
 }
 </script>
+

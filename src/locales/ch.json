@@ -12,5 +12,12 @@
   "map": "地图组件",
   "draggable": "拖拽组件",
   "split-pane": "切割面板",
-  "button": "按钮组件"
+  "button": "按钮组件",
+  "account":"账户管理",
+  "accountManager":"账户列表",
+  "accountRole":"角色管理",
+  "accountPermission":"权限管理",
+  "article":"文章管理",
+  "articleManager":"文章列表",
+  "articleEdit":"文章编辑"
 }
