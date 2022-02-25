@@ -3,7 +3,14 @@
 </template>
 
 <script>
-import { Ref, ref, defineComponent, onMounted } from "vue";
+import {
+  Ref,
+  ref,
+  defineComponent,
+  onMounted,
+  onBeforeUnmount,
+  onUnmounted,
+} from "vue";
 import * as THREE from "three";
 import * as BufferGeometryUtils from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import cloud from "/@/assets/images/cloud.png";
@@ -124,8 +131,9 @@ export default defineComponent({
       renderer.setSize(pageWidth, pageHeight - 50);
       document.querySelector(".session5").appendChild(renderer.domElement);
     }
+    let timer = null;
     function animate() {
-      requestAnimationFrame(animate);
+      timer = requestAnimationFrame(animate);
       // 从最远的z轴处开始往前一点一点的移动，达到穿越云层的目的
       camera.position.z =
         cameraPositionZ - (((Date.now() - StartTime) * 0.03) % cameraPositionZ);
@@ -134,6 +142,10 @@ export default defineComponent({
     onMounted(() => {
       init();
       animate();
+    });
+    onBeforeUnmount(() => {
+      timer && cancelAnimationFrame(timer);
+      document.querySelector(".session5").innerHTML = "";
     });
     return { session5 };
   },
