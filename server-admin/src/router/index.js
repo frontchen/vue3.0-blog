@@ -17,8 +17,6 @@ const routes = [
           savedPosition: false,
         },
       },
-  
-     
     ],
     meta: {
       icon: "el-icon-s-home",
@@ -27,8 +25,8 @@ const routes = [
     },
   },
   {
-    path:'/article',
-    name:'article',
+    path: "/article",
+    name: "article",
     component: Main,
     redirect: "/article/manager",
     children: [
@@ -39,7 +37,7 @@ const routes = [
         meta: {
           title: "articleManager",
           showLink: false,
-          savedPosition: true
+          savedPosition: true,
         },
       },
       {
@@ -49,20 +47,20 @@ const routes = [
         meta: {
           title: "articleManager",
           showLink: false,
-          savedPosition: true
+          savedPosition: true,
         },
       },
     ],
     meta: {
-      title: 'article',
+      title: "article",
       icon: "el-icon-document",
       showLink: true,
       savedPosition: false,
     },
   },
   {
-    path:'/account',
-    name:'account',
+    path: "/account",
+    name: "account",
     component: Main,
     redirect: "/account/manager",
     children: [
@@ -73,7 +71,7 @@ const routes = [
         meta: {
           title: "accountManager",
           showLink: false,
-          savedPosition: true
+          savedPosition: true,
         },
       },
       {
@@ -83,7 +81,7 @@ const routes = [
         meta: {
           title: "accountRole",
           showLink: false,
-          savedPosition: true
+          savedPosition: true,
         },
       },
       {
@@ -93,12 +91,12 @@ const routes = [
         meta: {
           title: "accountPermission",
           showLink: false,
-          savedPosition: true
+          savedPosition: true,
         },
       },
     ],
     meta: {
-      title: 'account',
+      title: "account",
       icon: "el-icon-setting",
       showLink: true,
       savedPosition: false,
@@ -140,8 +138,6 @@ const routes = [
       showLink: false,
     },
   },
-
- 
 ];
 const router = createRouter({
   history: createWebHistory(),
@@ -167,7 +163,7 @@ import NProgress from "/@/services/progress";
 
 router.beforeEach((to, _from, next) => {
   NProgress.start();
-  console.log(['to',to])
+  console.log(["to", to]);
   document.title = to.meta.title || "等闲若得东风顾,不负春光不负卿"; // 动态title
   //whiteList.indexOf(to.path) !== -1 || window.sessionStorage.getItem("info") ? next() : next("/login") // 全部重定向到登录页
   next();

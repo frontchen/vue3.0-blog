@@ -2311,6 +2311,11 @@ systemjs@^6.8.3:
   resolved "https://registry.npm.taobao.org/systemjs/download/systemjs-6.8.3.tgz#67e27f49242e9d81c2b652b204ae54e8bfcc75a3"
   integrity sha1-Z+J/SSQunYHCtlKyBK5U6L/MdaM=
 
+three@^0.138.0:
+  version "0.138.0"
+  resolved "https://registry.npmmirror.com/three/-/three-0.138.0.tgz#cd0cbeb621a5826c65e49e06705d0bb9f6c13ca6"
+  integrity sha512-xM/WwUd53ClkbHFrftW29aIzMVvyhj4rSZmIVgn6hZ/kYB7aMjDD8FFy4VJamygXSrldJuOgEJuaI+E+8mt/KA==
+
 timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npm.taobao.org/timsort/download/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
