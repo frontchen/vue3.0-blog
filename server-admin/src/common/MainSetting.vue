@@ -4,7 +4,7 @@
 		<ul class="setting">
 			<li>
 				<span>灰色模式</span>
-				<vxe-switch v-model="greyVal" open-label="开" close-label="关" @change="greyChange"></vxe-switch>
+				<el-switch v-model="greyVal" active-text="开" inactive-text="关" @change="greyChange"></el-switch>
 			</li>
 		</ul>
 	</panel>
@@ -33,7 +33,7 @@ export default {
 			: document.querySelector('html')?.setAttribute('class', 'html-grey')
 
 		// 灰色模式设置
-		const greyChange = ({ value }) => {
+		const greyChange = value => {
 			if (value) {
 				localOperate('greyVal', true, 'set')
 				document.querySelector('html')?.setAttribute('class', 'html-grey')

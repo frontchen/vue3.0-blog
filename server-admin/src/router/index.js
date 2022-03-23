@@ -45,7 +45,7 @@ const routes = [
         name: "articleManagerEdit",
         component: () => import("/@/pages/article/ArticleEdit.vue"),
         meta: {
-          title: "articleManager",
+          title: "articleEdit",
           showLink: false,
           savedPosition: true,
         },

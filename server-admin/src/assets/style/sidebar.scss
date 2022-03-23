@@ -1,15 +1,14 @@
 #app {
-
   .main-container {
     min-height: 100%;
-    transition: margin-left .28s;
+    transition: margin-left 0.28s;
     margin-left: $sideBarWidth;
     position: relative;
   }
 
   .sidebar-container {
     transition: width 0.28s;
-    width: $sideBarWidth !important;
+    min-width: $sideBarWidth !important;
     background-color: $menuBg;
     height: 100%;
     position: fixed;
@@ -18,15 +17,16 @@
     bottom: 0;
     left: 0;
     z-index: 1001;
-    overflow: hidden;
+    // overflow: hidden;
 
     // reset element-plus css
     .horizontal-collapse-transition {
-      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+      transition: 0s width ease-in-out, 0s padding-left ease-in-out,
+        0s padding-right ease-in-out;
     }
 
     .scrollbar-wrapper {
-      overflow-x: hidden !important;
+      // overflow-x: hidden !important;
     }
 
     .el-scrollbar__bar.is-vertical {
@@ -50,7 +50,7 @@
     a {
       display: inline-block;
       width: 100%;
-      overflow: hidden;
+      // overflow: hidden;
     }
 
     .el-menu {
@@ -67,11 +67,11 @@
       }
     }
 
-    .is-active>.el-submenu__title {
+    .is-active > .el-submenu__title {
       color: $subMenuActiveText !important;
     }
 
-    & .nest-menu .el-submenu>.el-submenu__title,
+    & .nest-menu .el-submenu > .el-submenu__title,
     & .el-submenu .el-menu-item {
       min-width: $sideBarWidth !important;
       background-color: $subMenuBg !important;
@@ -83,13 +83,12 @@
   }
 
   .hideSidebar {
-   
     .sidebar-container {
-      width: 54px !important;
+      min-width: 54px !important;
     }
 
     .main-container {
-      margin-left: 54px;
+      margin-left: 72px;
     }
 
     .submenu-title-noDropdown {
@@ -98,14 +97,12 @@
 
       .el-tooltip {
         padding: 0 !important;
-        
       }
     }
 
     .el-submenu {
-      overflow: hidden;
-      &>.el-submenu__title {
-
+      // overflow: hidden;
+      & > .el-submenu__title {
         .el-submenu__icon-arrow {
           display: none;
         }
@@ -115,11 +112,11 @@
     .el-menu--collapse {
       margin-left: -5px; //需优化的地方
       .el-submenu {
-        &>.el-submenu__title {
-          &>span {
+        & > .el-submenu__title {
+          & > span {
             height: 0;
             width: 0;
-            overflow: hidden;
+            // overflow: hidden;
             visibility: hidden;
             display: inline-block;
           }
@@ -139,8 +136,8 @@
     }
 
     .sidebar-container {
-      transition: transform .28s;
-      width: $sideBarWidth !important;
+      transition: transform 0.28s;
+      min-width: $sideBarWidth !important;
     }
 
     &.hideSidebar {
@@ -153,7 +150,6 @@
   }
 
   .withoutAnimation {
-
     .main-container,
     .sidebar-container {
       transition: none;
@@ -163,13 +159,13 @@
 
 // when menu collapsed
 .el-menu--vertical {
-  &>.el-menu {
+  & > .el-menu {
     i {
       margin-right: 16px;
     }
   }
 
-  .nest-menu .el-submenu>.el-submenu__title,
+  .nest-menu .el-submenu > .el-submenu__title,
   .el-menu-item {
     &:hover {
       // you can use $subMenuHover
@@ -178,7 +174,7 @@
   }
 
   // the scroll bar appears when the subMenu is too long
-  >.el-menu--popup {
+  > .el-menu--popup {
     max-height: 100vh;
     overflow-y: auto;
 
@@ -195,7 +191,9 @@
       border-radius: 20px;
     }
   }
-  
 }
 
-.el-scrollbar__wrap { overflow: auto; height: 100%; }
+.el-scrollbar__wrap {
+  overflow: auto;
+  height: 100%;
+}

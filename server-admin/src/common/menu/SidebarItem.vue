@@ -50,7 +50,7 @@ export default defineComponent({
 		const onlyOneChild = ref({})
 
 		function hasOneShowingChild(children = [], parent) {
-			const showingChildren = children.filter((item) => {
+			const showingChildren = children.filter(item => {
 				if (item.hidden) {
 					return false
 				} else {
@@ -70,7 +70,7 @@ export default defineComponent({
 			return false
 		}
 
-		const resolvePath = (routePath) => {
+		const resolvePath = routePath => {
 			return path.resolve(props.basePath, routePath)
 		}
 
