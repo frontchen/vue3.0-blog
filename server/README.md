@@ -1,10 +1,12 @@
-# my_midway_project
+# server
+
+
 
 ## QuickStart
 
 <!-- add docs here for user -->
 
-see [midway docs][midway] for more detail.
+see [egg docs][egg] for more detail.
 
 ### Development
 
@@ -18,12 +20,14 @@ $ open http://localhost:7001/
 
 ```bash
 $ npm start
+$ npm stop
 ```
 
 ### npm scripts
 
 - Use `npm run lint` to check code style.
 - Use `npm test` to run unit test.
+- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
 
 
-[midway]: https://midwayjs.org
+[egg]: https://eggjs.org

@@ -1,50 +1,46 @@
 {
-  "name": "my-midway-project",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "egg": {
+    "declarations": true
+  },
   "dependencies": {
-    "@midwayjs/bootstrap": "^3.0.0",
-    "@midwayjs/core": "^3.0.0",
-    "@midwayjs/decorator": "^3.0.0",
-    "@midwayjs/info": "^3.0.0",
-    "@midwayjs/koa": "^3.0.0",
-    "@midwayjs/logger": "^2.14.0",
-    "@midwayjs/validate": "^3.0.0"
+    "egg": "^2.15.1",
+    "egg-scripts": "^2.11.0"
   },
   "devDependencies": {
-    "@midwayjs/cli": "^1.2.90",
-    "@midwayjs/mock": "^3.0.0",
-    "@types/jest": "^26.0.10",
-    "@types/koa": "^2.13.4",
-    "@types/node": "14",
-    "cross-env": "^6.0.0",
-    "jest": "^26.4.0",
-    "mwts": "^1.0.5",
-    "ts-jest": "^26.2.0",
-    "typescript": "^4.0.0"
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node ./bootstrap.js",
-    "dev": "cross-env NODE_ENV=local midway-bin dev --ts",
-    "test": "midway-bin test --ts",
-    "cov": "midway-bin cov --ts",
-    "lint": "mwts check",
-    "lint:fix": "mwts fix",
-    "ci": "npm run cov",
-    "build": "midway-bin build -c"
+    "start": "egg-scripts start --daemon --title=egg-server-server",
+    "stop": "egg-scripts stop --title=egg-server-server",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
   },
-  "midway-bin-clean": [
-    ".vscode/.tsbuildinfo",
-    "dist"
-  ],
+  "ci": {
+    "version": "10"
+  },
   "repository": {
     "type": "git",
     "url": ""
   },
-  "author": "anonymous",
+  "author": "",
   "license": "MIT"
 }
