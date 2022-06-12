@@ -3,7 +3,6 @@ const version = '1.0.0'
 // 发布日期
 const bundleVersion = '20210420'
 
-
 // 白名单【非网关】
 const whitelist = [
   // { name: 'commonUpload', path: 'fileUpload/upload' }
@@ -17,12 +16,11 @@ const services = {
   }
 }
 
-
 export default {
   bundleVersion: bundleVersion,
   version: version,
   apiUrl: import.env.VITE_APP_API,
-  apiBaseUrl:import.env.VITE_BASE_URL,
+  apiBaseUrl: import.env.VITE_BASE_URL,
   apiConfig: services,
-  whitelist,
+  whitelist
 }

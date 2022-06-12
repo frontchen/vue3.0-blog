@@ -4,13 +4,34 @@
 
 <script>
 import { storeKey } from '/@/data'
-
 export default {
 	name: 'App',
 	created() {
 		this.resetStore()
 	},
+	mounted() {
+		this.cosPlayTitle()
+	},
+	beforeUnmount() {
+		document.removeEventListener('visibilitychange', this.changeTitle)
+	},
+
 	methods: {
+		cosPlayTitle() {
+			// 动态改变title
+			let vm = this
+			document.addEventListener('visibilitychange', vm.changeTitle)
+		},
+		changeTitle() {
+			// 用户息屏、或者切到后台运行 （离开页面）
+			if (document.visibilityState === 'hidden') {
+				document.title = '等闲若得东风顾,不负春光不负卿'
+			}
+			// 用户打开或回到页面
+			if (document.visibilityState === 'visible') {
+				document.title = this.$t(this.$route.meta.title)
+			}
+		},
 		// 解决防止刷新页面 vuex store 丢失的问题
 		resetStore() {
 			// 在页面加载时读取sessionStorage里的状态信息
